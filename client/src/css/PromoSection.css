@@ -1,0 +1,87 @@
+.promo-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 2rem;
+}
+
+/* Card Container */
+.promo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 16px;
+  padding: 3rem;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+/* Different Backgrounds */
+.promo-snacks {
+  background: linear-gradient(135deg, #fbe9d7 50%, #f9d9aa 50%);
+}
+
+.promo-fruits {
+  background: linear-gradient(135deg, #ffe4eb 50%, #ffc6d0 50%);
+}
+
+/* Image */
+.promo-img img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Content */
+.promo-content {
+  max-width: 250px;
+}
+
+.promo-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.promo-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.shop-btn {
+  background: transparent;
+  border: 1.5px solid #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .promo-img img {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .promo-content {
+    max-width: 100%;
+  }
+}

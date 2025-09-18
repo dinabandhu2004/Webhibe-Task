@@ -1,0 +1,146 @@
+/* Container */
+.explore-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+/* Left Image */
+.left-section {
+  flex: 1 1 400px;
+  max-width: 500px;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.offer-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* Text */
+.text-section {
+    margin: 120px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px #eee;
+  line-height: 1.2;
+}
+
+/* Cards Section */
+.cards-section {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.cards-slider {
+  display: flex;
+  padding-left: 30px;
+  gap: 1rem;
+  animation: slide 40s linear infinite;
+}
+
+.category-card {
+  min-width: 180px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.category-card .icon {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.category-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.category-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* move only half, since items are duplicated */
+  }
+}
+
+.slider {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: slide 15s linear infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .left-section,
+  .text-section {
+    display: none; /* hide image and text */
+  }
+
+  .cards-section {
+    width: 100vw; /* prevent horizontal overflow */
+    padding: 0 1rem; /* optional padding */
+  }
+
+  .cards-slider {
+    animation: slide 50s linear infinite;
+    gap: 0.8rem;
+  }
+
+  .category-card {
+    min-width: 45vw; /* responsive width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .category-card {
+    min-width: 70vw; /* take more width on small screens */
+    padding: 0.8rem;
+  }
+}
